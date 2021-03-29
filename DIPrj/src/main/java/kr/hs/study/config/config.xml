@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="c1" class="kr.hs.study.beans.Car"/>
+
+<bean id="obj1" class="kr.hs.study.beans.CarUser">
+	<constructor-arg value="kim" index="0"/>
+	<constructor-arg value="red" index="1"/>	
+	<constructor-arg ref="c1" index="2"/>
+</bean>
+
+<bean id="obj2" class="kr.hs.study.beans.CarUser">
+	<property name="owner" value="lee"/>
+	<property name="color" value="blue"/>
+	<property name="car_type" ref="c1"/>
+</bean>
+ 
+<bean id="obj3" class="kr.hs.study.beans.CarUser" autowire="byName"/>
+</beans>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="obj1" class="kr.hs.study.beans.TestBean1" lazy-init="true" scope="prototype"/>
+
+<!-- constructorDI -->
+<bean id="obj2" class="kr.hs.study.beans.TestBean1">
+	<constructor-arg value="10" type="int" index="0"/>
+	<constructor-arg value="11.11" type="double" index="1"/>
+	<constructor-arg value="NCSDB" type="java.lang.String" index="2"/>
+ 	<constructor-arg ref="d1" index="3"/>
+</bean>
+
+<!-- setterDI -->
+<bean id="obj3" class="kr.hs.study.beans.TestBean1">
+	<property name="a" value="20"/>
+	<property name="b" value="22.22"/>
+	<property name="c" value="spring2"/>
+	<property name="d1" ref="d1"/>
+</bean>
+ 
+<bean id="d1" class="kr.hs.study.beans.DataBean1"/>
+
+<bean id="obj4" class="kr.hs.study.beans.TestBean1" autowire="byName"/>
+<!-- private DataBean1 d1;에서 d1과 동일한 이름의 bean 객체 할당 
+	멤버변수 이름 == bean의 id가 동일한 것이 자동주입(객체일때만)	-->
+	
+<bean id="obj5" class="kr.hs.study.beans.TestBean1" autowire="byType"/>
+<!-- private DataBean1 d1;에서 d1과 동일한 이름의 bean 객체 할당 
+	멤버변수 클래스타입/타입(클래스이름) == bean의 클래스/클래스타입이 동일한 것이 자동주입(객체일때만)
+	동일한 이름의 bean이 2개 이상 존재할 때는 에러 발생	-->
+
+<bean id="obj6" class="kr.hs.study.beans.TestBean1" autowire="constructor"/>
+<!-- 생성자의 매개변수타입 == bean의 타입이 일치 -->
+
+
+<bean id="obj7" class="kr.hs.study.beans.TestBean1" autowire="byType">
+	<constructor-arg value="10"/>
+	<constructor-arg value="22.22"/>
+	<constructor-arg value="spring3"/>
+</bean>
+
+</beans>
+<!-- DI -constructorDI <constructor-arg value="값"
+                                        ref="객체"
+                                        type="타입", index="인덱스/>
+        -setterDI <property name=""/>
+        
+Autowire 자동주입
+->객체 주입에만 쓰인다. 일반자료형에는 불가능.
+1. byName
+2. byType
+3. constructor
+     -->

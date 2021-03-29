@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="stv" class="kr.hs.study.beans.SamsungTv" lazy-init="true" scope="prototype"/>
+ <bean id="ltv" class="kr.hs.study.beans.LgTv" lazy-init="true" scope="prototype"/>
+ 
+</beans>
