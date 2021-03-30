@@ -16,7 +16,7 @@ import kr.hs.study.beans.TestBean4;
 
 public class JavaConfig {
 	@Bean(name="obj2")
-	public TestBean2 java1() {
+	public TestBean2 java1() {	
 		TestBean2 t1 = new TestBean2();
 		return t1;
 	}//메소드 이름이 id가 된다.
@@ -67,7 +67,12 @@ public class JavaConfig {
 	}
 	
 }
-
+/*
+ * @Autowired(멤버변수, setter, 생성자 앞에만 붙여서 자동수입 가능, 객체타입만)
+ * private DataBean data1;
+ * DataBean의 타입(클래스)가 등록되어 있으면 그 주소를 data1에 넣어라
+ * -> setter 필요 없음
+ */
 
 
 

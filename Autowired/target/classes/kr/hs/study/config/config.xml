@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                         http://www.springframework.org/schema/beans/spring-beans.xsd
+                         http://www.springframework.org/schema/context
+                         http://www.springframework.org/schema/context/spring-context.xsd">
+                         
+                         
+	<bean id="d1" class="kr.hs.study.beans.DataBean1"/>
+    <!-- <context:annotation-config/>
+	<bean id="obj1" class="kr.hs.study.beans.TestBean1"/>
+	
+	Setter로 세팅	
+	<bean id="obj2" class="kr.hs.study.beans.TestBean1">
+		<property name="data1" value="10"/>
+		<property name="data2" value="11.11"/>
+		<property name="data3" ref="d1"/>
+		<property name="data4" ref="d1"/>
+	</bean>
+	
+	생성자로 세팅 -->
+	<bean id="obj3" class="kr.hs.study.beans.TestBean1">
+		<constructor-arg value="11" index="0"/>
+		<constructor-arg value="11.11" index="1"/>
+		<constructor-arg ref="d1" index="2"/>
+		<constructor-arg ref="d1" index="3"/>
+	</bean>
+	
+	
+</beans>
