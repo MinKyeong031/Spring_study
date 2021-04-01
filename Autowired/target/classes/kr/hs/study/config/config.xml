@@ -7,9 +7,9 @@
                          http://www.springframework.org/schema/context
                          http://www.springframework.org/schema/context/spring-context.xsd">
                          
-                         
+    <context:annotation-config/>            
 	<bean id="d1" class="kr.hs.study.beans.DataBean1"/>
-    <!-- <context:annotation-config/>
+    <!-- 
 	<bean id="obj1" class="kr.hs.study.beans.TestBean1"/>
 	
 	Setter로 세팅	

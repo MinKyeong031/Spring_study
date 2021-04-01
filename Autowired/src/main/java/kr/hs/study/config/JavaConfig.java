@@ -38,5 +38,4 @@ public class JavaConfig {
 		t1.setData2(11.11);
 		return t1;
 	}
-	
 }

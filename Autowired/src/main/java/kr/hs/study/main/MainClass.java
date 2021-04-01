@@ -37,7 +37,9 @@ public class MainClass {
 		
 		ctx1.close();
 		System.out.println("--------------------------------------------------------------------------");
-		/*--------------------------------------------------------------------------------------------------------*/
+		
+		
+		
 		//java ¼³Á¤
 		AnnotationConfigApplicationContext ctx2 = new AnnotationConfigApplicationContext(JavaConfig.class);
 		/*
