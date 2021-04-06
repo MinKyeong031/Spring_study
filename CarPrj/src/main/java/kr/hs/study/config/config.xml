@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                         http://www.springframework.org/schema/beans/spring-beans.xsd
+                         http://www.springframework.org/schema/context
+                         http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- 
+<bean id="car" class="kr.hs.study.beans.Car"/>
+
+<bean id="obj1" class="kr.hs.study.beans.CarUser">
+	<constructor-arg value="kim" index="0"/>
+	<constructor-arg value="red" index="1"/>	
+	<constructor-arg ref="car" index="2"/>
+</bean>
+
+<bean id="obj2" class="kr.hs.study.beans.CarUser">
+	<property name="owner" value="lee"/>
+	<property name="color" value="blue"/>
+	<property name="car_type" ref="car"/>
+</bean>
+ 
+<bean id="obj3" class="kr.hs.study.beans.CarUser" autowire="byName"/>
+
+
+지정된 패키지 안에 있는 bean들을 분석해서 생성한다. -->
+<context:component-scan base-package="kr.hs.study.beans"/>
+
+
+</beans>
