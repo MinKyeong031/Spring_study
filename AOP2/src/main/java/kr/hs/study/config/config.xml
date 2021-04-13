@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:aop="http://www.springframework.org/schema/aop"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans
+                       http://www.springframework.org/schema/beans/spring-beans.xsd
+                       http://www.springframework.org/schema/context
+                       http://www.springframework.org/schema/context/spring-context.xsd
+                       http://www.springframework.org/schema/aop
+                       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="t1" class="kr.hs.study.beans.TestBean1"/>
+    <bean id="t2" class="kr.hs.study.beans.TestBean2"/>
+    
+	<bean id="advice" class="kr.hs.study.advisor.Advice"/>
+    
+ 
+	<aop:config>
+		<aop:aspect ref="advice">
+			<!-- <aop:pointcut id="point" expression="execution(* method3())"/>
+			<aop:before method="beforeMethod()" pointcut-ref="point"/>
+			
+			<aop:pointcut id="point" expression="execution(* method2())"/>
+			<aop:before method="beforeMethod()" pointcut-ref="point"/>
+			<aop:after method="afterMethod()" pointcut-ref="point"/>
+			
+			<aop:pointcut id="point" expression="execution(* method*())"/>
+			<aop:before method="beforeMethod()" pointcut-ref="point"/>
+			<aop:after method="afterMethod()" pointcut-ref="point"/>
+			
+			<aop:pointcut id="point" expression="execution(* kr.hs.study.beans..*Bean1.method*())"/>
+			<aop:before method="beforeMethod()" pointcut-ref="point"/>
+			<aop:after method="afterMethod()" pointcut-ref="point"/>
+				
+			<aop:pointcut id="point" expression="execution(* func1())"/>
+			<aop:around method="aroundMethod" pointcut-ref="point"/>
+			<aop:after-throwing method="afterThrowing" pointcut-ref="point" throwing="e"/>
+			
+			<aop:pointcut id="point" expression="execution(* func2())"/>
+			<aop:around method="aroundMethod" pointcut-ref="point"/>
+			<aop:after-returning method="afterReturning" pointcut-ref="point"/> -->
+			
+			<aop:pointcut id="point" expression="execution(* func4())"/>
+			<aop:around method="aroundMethod" pointcut-ref="point"/>
+		</aop:aspect>
+	</aop:config>
+	
+	
+</beans>
+
