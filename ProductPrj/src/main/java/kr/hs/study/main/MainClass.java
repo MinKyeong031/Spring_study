@@ -38,11 +38,11 @@ public class MainClass {
 				UpdatePriceNStock();
 				break;
 			case 4:
-				System.out.println("5번 '상품 삭제' 선택!\n");
+				System.out.println("4번 '상품 삭제' 선택!\n");
 				DeletePro();
 				break;
 			case 5:
-				System.out.println("6번 '상품 조회' 선택!\n");
+				System.out.println("5번 '상품 조회' 선택!\n");
 				ShowPro();
 				break;
 			default:
